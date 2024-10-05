@@ -9,6 +9,7 @@ import 'package:islami/utils/app_colors.dart';
 import '../utils/app_images.dart';
 
 class HomeScreen extends StatefulWidget {
+  static const String routeName = 'homeScreen';
   const HomeScreen({super.key});
 
   @override
