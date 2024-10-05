@@ -3,7 +3,7 @@ import 'package:islami/utils/app_colors.dart';
 import 'package:islami/utils/app_constants.dart';
 import 'package:islami/utils/app_images.dart';
 
-import '../widgets/custom_quran_text_widget.dart';
+import '../../widgets/custom_quran_text_widget.dart';
 
 class QuranTab extends StatelessWidget {
   const QuranTab({super.key});
