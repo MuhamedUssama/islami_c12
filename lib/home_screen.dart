@@ -13,8 +13,12 @@ class HomeScreen extends StatelessWidget {
           image: AssetImage(AppImages.background),
         ),
       ),
-      child: const Scaffold(
-        backgroundColor: Colors.transparent,
+      child: Scaffold(
+        appBar: AppBar(
+          title: const Text(
+            'Islami',
+          ),
+        ),
       ),
     );
   }

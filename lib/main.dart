@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:islami/utils/app_theme.dart';
 
 import 'home_screen.dart';
 
@@ -11,10 +12,12 @@ class Islami extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
+      theme: AppTheme.lightTheme,
+      themeMode: ThemeMode.light,
       title: 'Islami App',
       debugShowCheckedModeBanner: false,
-      home: HomeScreen(),
+      home: const HomeScreen(),
     );
   }
 }
