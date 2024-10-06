@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:islami/utils/app_images.dart';
+
+import '../widgets/custom_card_for_islami_content.dart';
 // import 'package:flutter/services.dart';
 
 class ContentScreen extends StatelessWidget {
@@ -7,7 +10,22 @@ class ContentScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold();
+    double height = MediaQuery.of(context).size.height;
+    double width = MediaQuery.of(context).size.width;
+    return Container(
+      decoration: const BoxDecoration(
+        image: DecorationImage(image: AssetImage(AppImages.background)),
+      ),
+      child: Scaffold(
+        appBar: AppBar(title: const Text('Islami')),
+        body: CustomCardForIslamiContent(
+          height: height,
+          width: width,
+          soraName: '',
+          soraContent: '',
+        ),
+      ),
+    );
   }
 
   void readContent() async {

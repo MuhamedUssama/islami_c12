@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:islami/screens/content_screen.dart';
 import 'package:islami/utils/app_colors.dart';
 import 'package:islami/utils/app_constants.dart';
 import 'package:islami/utils/app_images.dart';
@@ -61,21 +62,31 @@ class QuranTab extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    CustomQuranTextWidget(
-                      text: AppConstants.soraAyatCount[index],
-                      fontSize: 22,
-                      width: width,
-                      fontWeight: FontWeight.w400,
+                    InkWell(
+                      onTap: () {
+                        Navigator.pushNamed(context, ContentScreen.routeName);
+                      },
+                      child: CustomQuranTextWidget(
+                        text: AppConstants.soraAyatCount[index],
+                        fontSize: 22,
+                        width: width,
+                        fontWeight: FontWeight.w400,
+                      ),
                     ),
                     const VerticalDivider(
                       color: AppColors.primaryColor,
                       thickness: 3,
                     ),
-                    CustomQuranTextWidget(
-                      text: AppConstants.soraNames[index],
-                      fontSize: 22,
-                      width: width,
-                      fontWeight: FontWeight.w400,
+                    InkWell(
+                      onTap: () {
+                        Navigator.pushNamed(context, ContentScreen.routeName);
+                      },
+                      child: CustomQuranTextWidget(
+                        text: AppConstants.soraNames[index],
+                        fontSize: 22,
+                        width: width,
+                        fontWeight: FontWeight.w400,
+                      ),
                     ),
                   ],
                 ),
