@@ -46,11 +46,13 @@ class CustomCardForIslamiContent extends StatelessWidget {
             ),
           ),
           const Divider(color: AppColors.primaryColor),
-          Text(
-            soraContent,
-            style: const TextStyle(
-              fontSize: 24,
-              color: AppColors.accentColor,
+          SingleChildScrollView(
+            child: Text(
+              soraContent,
+              style: const TextStyle(
+                fontSize: 24,
+                color: AppColors.accentColor,
+              ),
             ),
           ),
         ],

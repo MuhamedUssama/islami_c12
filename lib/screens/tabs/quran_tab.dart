@@ -4,6 +4,7 @@ import 'package:islami/utils/app_colors.dart';
 import 'package:islami/utils/app_constants.dart';
 import 'package:islami/utils/app_images.dart';
 
+import '../../models/content_screen_model.dart';
 import '../../widgets/custom_quran_text_widget.dart';
 
 class QuranTab extends StatelessWidget {
@@ -64,7 +65,15 @@ class QuranTab extends StatelessWidget {
                   children: [
                     InkWell(
                       onTap: () {
-                        Navigator.pushNamed(context, ContentScreen.routeName);
+                        Navigator.pushNamed(
+                          context,
+                          ContentScreen.routeName,
+                          arguments: ContentScreenModel(
+                            title: AppConstants.soraNames[index],
+                            fileName: "${index + 1}.txt",
+                            isQuran: true,
+                          ),
+                        );
                       },
                       child: CustomQuranTextWidget(
                         text: AppConstants.soraAyatCount[index],
@@ -79,7 +88,15 @@ class QuranTab extends StatelessWidget {
                     ),
                     InkWell(
                       onTap: () {
-                        Navigator.pushNamed(context, ContentScreen.routeName);
+                        Navigator.pushNamed(
+                          context,
+                          ContentScreen.routeName,
+                          arguments: ContentScreenModel(
+                            title: AppConstants.soraNames[index],
+                            fileName: "${index + 1}.txt",
+                            isQuran: true,
+                          ),
+                        );
                       },
                       child: CustomQuranTextWidget(
                         text: AppConstants.soraNames[index],
