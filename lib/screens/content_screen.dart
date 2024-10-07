@@ -69,12 +69,14 @@ class _ContentScreenState extends State<ContentScreen> {
               ),
               const Divider(color: AppColors.primaryColor),
               Expanded(
-                child: SingleChildScrollView(
-                  child: fileContent.isEmpty
-                      ? const CircularProgressIndicator(
+                child: fileContent.isEmpty
+                    ? const Center(
+                        child: CircularProgressIndicator(
                           color: AppColors.primaryColor,
-                        )
-                      : Text(
+                        ),
+                      )
+                    : SingleChildScrollView(
+                        child: Text(
                           fileContent,
                           textDirection: TextDirection.rtl,
                           textAlign: TextAlign.center,
@@ -83,7 +85,7 @@ class _ContentScreenState extends State<ContentScreen> {
                             color: AppColors.accentColor,
                           ),
                         ),
-                ),
+                      ),
               ),
             ],
           ),
