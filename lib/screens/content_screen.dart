@@ -95,9 +95,21 @@ class _ContentScreenState extends State<ContentScreen> {
   }
 
   void readContent() async {
-    String file =
-        await rootBundle.loadString('assets/files/quran/${arguments.fileName}');
-    fileContent = file;
+    if (arguments.isQuran) {
+      String file = await rootBundle
+          .loadString('assets/files/quran/${arguments.fileName}');
+
+      List<String> fileLines = file.split("\n");
+      for (int i = 0; i < fileLines.length; i++) {
+        fileLines[i] += "(${i + 1})  ";
+      }
+
+      fileContent = fileLines.join();
+    } else {
+      String file = await rootBundle
+          .loadString('assets/files/hadeth/${arguments.fileName}');
+      fileContent = file;
+    }
 
     setState(() {});
   }

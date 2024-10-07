@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:islami/models/content_screen_model.dart';
 import 'package:islami/utils/app_colors.dart';
 import 'package:islami/utils/app_images.dart';
 
 import '../../widgets/custom_quran_text_widget.dart';
+import '../content_screen.dart';
 
 class HadethTab extends StatelessWidget {
   const HadethTab({super.key});
@@ -35,7 +37,17 @@ class HadethTab extends StatelessWidget {
         Expanded(
           child: ListView.builder(
             itemBuilder: (context, index) => InkWell(
-              onTap: () {},
+              onTap: () {
+                Navigator.pushNamed(
+                  context,
+                  ContentScreen.routeName,
+                  arguments: ContentScreenModel(
+                    title: 'الحديث ${index + 1}',
+                    fileName: 'h${index + 1}.txt',
+                    isQuran: false,
+                  ),
+                );
+              },
               child: CustomQuranTextWidget(
                 text: 'الحديث رقم ${index + 1}',
                 fontSize: 22,
