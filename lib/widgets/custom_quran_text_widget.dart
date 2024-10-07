@@ -7,6 +7,7 @@ class CustomQuranTextWidget extends StatelessWidget {
   final String text;
   final double fontSize;
   final FontWeight fontWeight;
+  final double padding;
 
   const CustomQuranTextWidget({
     super.key,
@@ -14,6 +15,7 @@ class CustomQuranTextWidget extends StatelessWidget {
     required this.text,
     required this.fontSize,
     required this.fontWeight,
+    required this.padding,
   });
 
   @override
@@ -21,7 +23,7 @@ class CustomQuranTextWidget extends StatelessWidget {
     return SizedBox(
       width: width * 0.4,
       child: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: EdgeInsets.all(padding),
         child: Text(
           text,
           textAlign: TextAlign.center,

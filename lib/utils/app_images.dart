@@ -8,4 +8,6 @@ class AppImages {
   static const String hadethIcon = '${baseUrl}icon_hadeth.png';
 
   static const String quranScreenLogo = '${baseUrl}qur2an_screen_logo.png';
+
+  static const String hadeathScreenLogo = '${baseUrl}hadeth_logo.png';
 }

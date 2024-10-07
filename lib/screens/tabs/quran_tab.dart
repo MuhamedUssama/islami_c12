@@ -32,9 +32,10 @@ class QuranTab extends StatelessWidget {
             children: [
               CustomQuranTextWidget(
                 text: "Ayat Number",
-                fontSize: 18,
+                fontSize: 22,
                 width: width,
                 fontWeight: FontWeight.bold,
+                padding: 8,
               ),
               const VerticalDivider(
                 color: AppColors.primaryColor,
@@ -42,9 +43,10 @@ class QuranTab extends StatelessWidget {
               ),
               CustomQuranTextWidget(
                 text: "Sora Name",
-                fontSize: 18,
+                fontSize: 22,
                 width: width,
                 fontWeight: FontWeight.bold,
+                padding: 8,
               ),
             ],
           ),
@@ -80,6 +82,7 @@ class QuranTab extends StatelessWidget {
                         fontSize: 22,
                         width: width,
                         fontWeight: FontWeight.w400,
+                        padding: 8,
                       ),
                     ),
                     const VerticalDivider(
@@ -103,6 +106,7 @@ class QuranTab extends StatelessWidget {
                         fontSize: 22,
                         width: width,
                         fontWeight: FontWeight.w400,
+                        padding: 8,
                       ),
                     ),
                   ],
